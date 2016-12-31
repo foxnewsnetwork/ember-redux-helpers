@@ -1,6 +1,17 @@
 # ember-redux-helpers
 
-This README outlines the details of collaborating on this Ember addon.
+exposes the `dispatch` helper in your templates
+
+## Example
+```javascript
+const modelChanged = (key, value) => ({
+  type: 'MODEL_CHANGED',
+  payload: { key, value }
+});
+```
+```handlebars
+{{one-way-input model.myFieldName update=(dispatch modelChanged 'myFieldName')}}
+```
 
 ## Installation
 
