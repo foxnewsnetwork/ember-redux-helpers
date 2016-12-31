@@ -1,5 +1,5 @@
 # ember-redux-helpers
-
+[![CircleCI](https://circleci.com/gh/foxnewsnetwork/ember-redux-helpers.svg?style=svg)](https://circleci.com/gh/foxnewsnetwork/ember-redux-helpers)
 exposes the `dispatch` helper in your templates
 
 ## Example
