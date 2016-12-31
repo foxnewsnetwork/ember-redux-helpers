@@ -7,8 +7,11 @@ export function dispatch([reduxAction, ...params]) {
   const redux = this.get('redux');
 
   let emberAction = (...invokeArgs) => {
-    let args = params.concat(invokeArgs);
-    return Ember.run.join(() => redux.dispatch(reduxAction(...args)));
+    const args = params.concat(invokeArgs);
+
+    return Ember.run.join(() => {
+      redux.dispatch(reduxAction(...args));
+    });
   };
 
   emberAction[ACTION] = true;
