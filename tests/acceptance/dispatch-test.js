@@ -16,10 +16,8 @@ test('handling dispatches', function(assert) {
     assert.equal(currentURL(), '/xfire');
     assert.equal(Page.nickname, 'rover');
     Page.writeNickname('edward');
-    return idleFor(15);
-  });
-
-  andThen(function() {
-    assert.equal(Page.nickname, 'edward');
+    idleFor(15).then(() => {
+      assert.equal(Page.nickname, 'edward');
+    });
   });
 });
